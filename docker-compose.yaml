@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:  
+  server:
+      container_name: guaranteed-subscriber
+      build:
+          context: .
+          dockerfile: Dockerfile
+      image: guaranteed-subscriber:latest
+
+
+

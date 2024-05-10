@@ -3,4 +3,4 @@
 /.vscode
 .DS_Store
 ### Creds
-#src/main/resources/application.properties
+src/main/resources/application.properties
