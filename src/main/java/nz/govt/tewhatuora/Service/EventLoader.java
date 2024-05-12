@@ -3,7 +3,6 @@ package nz.govt.tewhatuora.Service;
 import com.google.gson.Gson;
 import com.solace.messaging.receiver.InboundMessage;
 
-import nz.govt.tewhatuora.Events.*;
 import nz.govt.tewhatuora.Utilities.*;
 
 import java.util.Objects;
@@ -39,9 +38,13 @@ public class EventLoader {
 
             switch (event) {
                 case "death":
-                    Death.processDeath(message);
-                    break;
 
+
+                    logger.info("Topic          : " + message.getDestinationName());
+                    logger.info("Subject        : " + message.getProperty("subject"));
+                    logger.info("Payload        : " + message.getPayloadAsString());
+                    break;
+                    
                 default:
                     System.out.println(message.getPayloadAsString());
                     System.out.println("Unknown Event: " + event);

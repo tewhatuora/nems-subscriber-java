@@ -17,7 +17,7 @@ import nz.govt.tewhatuora.Service.EventLoader;
 public class EventTest {
 
     @Test
-    void testValidDeath() {
+    void testValidEvent() {
 
         String expected = "SUCCESS";
 
